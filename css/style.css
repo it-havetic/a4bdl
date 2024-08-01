@@ -16,7 +16,6 @@ body, html {
 
 .a3-page {
   width: 297mm;
-  height: 210mm;
   margin: auto;
   border: 1px solid #000;
 }
@@ -29,11 +28,12 @@ p {
   font-size: 18px; /* Adjust as needed */
 }
 
-/* Print styling */
+
 @media print {
   @page {
-      size: A3 landscape;
-      margin: 0;
+      size: A4 landscape;
+      margin: 20mm;
+
   }
 
   body * {

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Report & Outstanding Statement</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+    *{
+        font-size: 10px !important;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 20px;
+      }
+      body {
+        visibility: hidden;
+      }
+      .print-area {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 297mm;
+        height: 210mm;
+        padding: 20mm;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="print-area bg-white p-6 shadow-lg">
+    <header class="mb-8">
+      <h1 class="text-2xl font-bold mb-2">Delivery Report & Outstanding Statement</h1>
+      <p class="text-lg">Project: Mr. Khairul's Residence, RCU B7, F8, Uttora</p>
+    </header>
+    
+    <table class="w-full mb-8 border-collapse border border-gray-300">
+      <thead>
+        <tr>
+          <th class="border px-2 py-1">#</th>
+          <th class="border px-2 py-1">Product Image</th>
+          <th class="border px-2 py-1">Product Details</th>
+          <th class="border px-2 py-1">Unit</th>
+          <th class="border px-2 py-1">Approved U/P (TK)</th>
+          <th class="border px-2 py-1">PO QTY</th>
+          <th class="border px-4 py-2">DC01</th>
+          <th class="border px-4 py-2">DC02</th>
+          <th class="border px-4 py-2">DC03</th>
+          <th class="border px-2 py-1">Delivered</th>
+          <th class="border px-2 py-1">Total Price (TK)</th>
+          <th class="border px-2 py-1">Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example rows based on the extracted text -->
+        <tr>
+          <td class="border px-2 py-1">1</td>
+          <td class="border px-2 py-1">Image</td>
+          <td class="border px-2 py-1">CENTER CHYINDLIER/PENDENT SET</td>
+          <td class="border px-2 py-1">pcs</td>
+          <td class="border px-2 py-1">97,000.00</td>
+          <td class="border px-4 py-2">1</td>
+          <td class="border px-4 py-2">1</td>
+          <td class="border px-4 py-2">1</td>
+          <td class="border px-4 py-2">1</td>
+          <td class="border px-2 py-1">97,000.00</td>
+          <td class="border px-2 py-1">97,000.00</td>
+          <td class="border">
+            <input type="text" class="h-full outline-none px-4 w-40">
+          </td>
+        </tr>
+        <!-- Add more rows as needed based on the extracted data -->
+      </tbody>
+    </table>
+
+    <footer>
+      <p class="mt-4 text-lg">Outstanding Total: Four Lac One Thousand and Ninety Nine Taka Only.</p>
+      <p class="mt-4 text-lg">1ST Advance Deposit chk# CBL DEPOSIT dated 12OCT23 m/receipt #0</p>
+      <p class="mt-4 text-lg">2ND Partial Deposit chk# SIBL9889492 dated 12NOV23 m/receipt #00372</p>
+      <p class="mt-4 text-lg">3rd Partial Deposit chk# CITY bank 895936 dated 22FEB24 m/receipt #0394</p>
+      <p class="mt-4 text-lg">INSTALLATION COMMISSIONING & PROGRAMMING ALL ZONES</p>
+      <p class="mt-4 text-lg">TOTAL GOOD DELIVERY: Fifteen Lac Seventy Three Thousand Five Hundred Forty Five Taka Only.</p>
+      <p class="mt-4 text-lg">SUB Total: Eighteen Lac Twenty Three Thousand Five Hundred Forty Five Taka Only.</p>
+      <p class="mt-4 text-lg">GRAND Total (After Special Discount): Thirteen Lac and One Thousand & Ninety Nine Taka Only.</p>
+    </footer>
+  </div>
+</body>
+</html>

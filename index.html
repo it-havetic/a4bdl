@@ -4,15 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BD Luminaries- A4 Page Layout</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
     <script src="https://cdn.tailwindcss.com"></script>
+ <style>
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 20px;
+      }
+      body {
+        visibility: hidden;
+      }
+      .print-area {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 297mm;
+        height: 210mm;
+        padding: 20mm;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="a3-page py-5 px-3">
+    <!-- <div class="a3-page py-5 px-3">
         <p class="border mb-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos tenetur aliquid cumque a dolores mollitia velit accusantium. Voluptatum rem nemo numquam eligendi quidem sunt, iste, reprehenderit dicta, perspiciatis quos dolor?
             Voluptatum rem nemo numquam eligendi quidem sunt, iste, reprehenderit dicta, perspiciatis quos dolor? iste, reprehenderit dicta, perspiciatis quos dolor? pppppppppppppppppppppppppppppp
-            Voluptatum rem nemo numquam eligendi quidem sunt, iste, reprehenderit dicta, perspiciatis quos dolor? iste, reprehenderit dicta, perspiciatis quos dolor? pppppppppppppppppppppppppppppp dolor? iste, reprehenderit dicta, perspiciatis quos dolor? pppppppppppppppppppppppppppppp
+            Voluptatum rem nemo numquam eligendi quidem sunt, iste, reprehenderit dicta, perspiciatis quos dolor? iste, reprehenderit dicta, perspiciatis quos dolor? pppppppppppppppppppppppppppppp dolor? iste, reprehenderit dicta, perspiciatis quos dolor? pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp pppppppppppppppppppppppppppppppppppppppppppppppppppppppp pppppppppppppppppppppppppppppppppppppppppppppppppppppppp  pppppppppppppppppppppppppppppppppppppppppppppppppppppppp pppppppppppppppppppppppppppppppppppppppppppppppppppppppp pppppppppppppppppppppppppppppppppppppppppppppppppppppppp
 
         </p>
         <p class="border mb-3">
@@ -116,7 +140,43 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos tenetur aliquid cumque a dolores mollitia velit accusantium. Voluptatum rem nemo numquam eligendi quidem sunt, iste, reprehenderit dicta, perspiciatis quos dolor?
 
         </p>
-    </div>
+    </div> -->
+    
+    <div class="print-area bg-white p-6 shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Delivery Report & Outstanding Statement</h1>
+        <p class="mb-4">Project: Mr. Khairul's Residence, RCU, B7, F8, Uttora</p>
+        <table class="w-full border-collapse">
+          <thead>
+            <tr>
+              <th class="border px-4 py-2">#</th>
+              <th class="border px-4 py-2">Product Image</th>
+              <th class="border px-4 py-2">Product Details</th>
+              <th class="border px-4 py-2">Unit</th>
+              <th class="border px-4 py-2">Approved U/P (TK)</th>
+              <th class="border px-4 py-2">PO QTY</th>
+              <th class="border px-4 py-2">Delivered</th>
+              <th class="border px-4 py-2">Total Price (TK)</th>
+              <th class="border px-4 py-2">Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border px-4 py-2">1</td>
+              <td class="border px-4 py-2">Image</td>
+              <td class="border px-4 py-2">CENTER CHYINDLIER/PENDENT SET</td>
+              <td class="border px-4 py-2">pcs</td>
+              <td class="border px-4 py-2">97,000.00</td>
+              <td class="border px-4 py-2">1</td>
+              <td class="border px-4 py-2">1</td>
+              <td class="border px-4 py-2">97,000.00</td>
+              <td class="border px-4 py-2"></td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+        <p class="mt-4">Outstanding Total: Four Lac One Thousand and Ninety Nine Taka Only.</p>
+      </div>
+    
     <button onclick="window.print()">Print</button>
 </body>
 </html>
